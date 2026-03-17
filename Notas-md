@@ -1,0 +1,90 @@
+# 📚 Temas necesarios de cursada
+
+---
+
+## Fundamentos
+
+### 📦 Tipos de datos
+JavaScript tiene 8 tipos: `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint` y `object`. Se dividen en **primitivos** (guardan el valor directamente) y **de referencia** (guardan una dirección de memoria, como objetos y arrays). Podés consultar el tipo de una variable con `typeof`.
+📄 Ejemplo: `ejemplos/01-tipos-de-datos.js`
+
+---
+
+### ⚖️ Comparadores
+Permiten evaluar la relación entre dos valores y devuelven `true` o `false`. La diferencia clave es entre `==` (igualdad débil, convierte tipos automáticamente) y `===` (igualdad estricta, compara valor **y** tipo). Siempre preferí `===`.
+📄 Ejemplo: `ejemplos/02-comparadores.js`
+
+---
+
+### 🔗 Operadores lógicos
+Sirven para combinar o invertir condiciones. Los tres principales son `&&` (AND), `||` (OR) y `!` (NOT). También existen `??` (nullish coalescing) que es útil para valores por defecto sin pisar el `0` o cadenas vacías.
+📄 Ejemplo: `ejemplos/03-operadores-logicos.js`
+
+---
+
+### ➕ Operadores aritméticos
+Realizan operaciones matemáticas: `+`, `-`, `*`, `/`, `%` (módulo) y `**` (potencia). El módulo es especialmente útil para saber si un número es par, impar o divisible. La librería `Math` ofrece funciones como `round`, `floor`, `ceil`, `random`, `max`, `min`, etc.
+📄 Ejemplo: `ejemplos/04-operadores-aritmeticos.js`
+
+---
+
+## Control de flujo
+
+### 🔁 Bucles (`for`, `for...of`, `for...in`, `while`)
+Permiten repetir bloques de código. `for` clásico cuando sabés cuántas veces iterar. `for...of` para recorrer valores de arrays o strings. `for...in` para recorrer claves de objetos. `while` cuando la cantidad de repeticiones depende de una condición dinámica. `break` detiene el bucle, `continue` salta la vuelta actual.
+📄 Ejemplo: `ejemplos/05-bucles.js`
+
+---
+
+### 🔧 Funciones
+Bloques de código reutilizables que pueden recibir parámetros y devolver valores. Existen varias formas de declararlas: declaración clásica (tiene hoisting), expresión de función, y **arrow functions** (`=>`). Los parámetros pueden tener valores por defecto y se pueden usar **rest parameters** (`...args`) para agrupar múltiples argumentos. Las funciones son ciudadanos de primera clase: se pueden pasar como argumentos (callbacks).
+📄 Ejemplo: `ejemplos/06-funciones.js`
+
+---
+
+## Estructuras de datos
+
+### 📋 Arrays
+Una lista ordenada de elementos accesibles por índice (empezando en `0`). Pueden contener cualquier tipo de dato, incluidos otros arrays u objetos. Se pueden copiar y unir sin mutar el original usando el **spread operator** (`...`). La desestructuración permite extraer valores fácilmente.
+📄 Ejemplo: `ejemplos/07-arrays.js`
+
+---
+
+### 🗂️ Objetos
+Colección de pares **clave-valor** que representan entidades. Las propiedades se acceden con notación de punto o de corchetes. Pueden contener métodos (funciones internas) y objetos anidados. `Object.keys()`, `Object.values()` y `Object.entries()` son utilidades esenciales para trabajar con sus datos.
+📄 Ejemplo: `ejemplos/08-objetos.js`
+
+---
+
+## Métodos de Arrays
+
+### 🛠️ Básicos (mutan el array original)
+
+| Método | Descripción |
+|---|---|
+| `push(...items)` | Agrega elementos al **final** |
+| `pop()` | Elimina y devuelve el **último** |
+| `unshift(...items)` | Agrega elementos al **inicio** |
+| `shift()` | Elimina y devuelve el **primero** |
+| `splice(i, n, ...items)` | Elimina/inserta en cualquier posición |
+| `slice(inicio, fin)` | Devuelve una copia de una porción (no muta) |
+| `indexOf(valor)` | Índice de la primera ocurrencia (`-1` si no existe) |
+| `includes(valor)` | `true`/`false` si el elemento está en el array |
+
+📄 Ejemplo: `ejemplos/09-metodos-arrays-basicos.js`
+
+---
+
+### 🚀 Avanzados (devuelven un nuevo array, no mutan el original)
+
+| Método | Descripción |
+|---|---|
+| `map(fn)` | Transforma cada elemento → nuevo array del mismo tamaño |
+| `filter(fn)` | Filtra elementos que cumplan una condición |
+| `find(fn)` | Devuelve el **primer** elemento que cumpla la condición |
+| `findIndex(fn)` | Devuelve el **índice** del primer elemento que cumpla la condición |
+| `reduce(fn, inicial)` | Acumula todos los valores en un único resultado |
+| `some(fn)` | `true` si **al menos uno** cumple la condición |
+| `every(fn)` | `true` si **todos** cumplen la condición |
+
+📄 Ejemplo: `ejemplos/10-metodos-arrays-avanzados.js`
