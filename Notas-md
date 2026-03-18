@@ -111,3 +111,36 @@ const [valor, setValor] = useState(valorInicial);
 | Estado con array | Usar spread: `setTareas([...tareas, nuevaTarea])` |
 
 📄 Ejemplo: `ejemplos/11-useState.jsx`
+
+---
+
+## ⏳ Asincronismo
+
+### 🔄 Async / Await — Promesas y código asincrónico
+> 💡 **Fundamental para backend.** Toda operación que involucra una API, base de datos o sistema de archivos es asincrónica.
+
+JavaScript es de un solo hilo, así que en vez de "bloquear" esperando una respuesta, usa **Promesas** para manejar operaciones que tardan. `async/await` es la forma moderna y legible de trabajar con ellas.
+
+**Flujo básico:**
+```js
+async function ejemplo() {
+    try {
+        const resultado = await algunaPromesa(); // espera aquí
+        console.log(resultado);                  // continúa cuando termina
+    } catch (error) {
+        console.error(error.message);            // si hubo un error
+    }
+}
+```
+
+| Concepto | Descripción |
+|---|---|
+| `Promise` | Objeto que representa un valor futuro (pendiente / resuelto / rechazado) |
+| `async` | Marca una función como asincrónica (siempre devuelve una Promesa) |
+| `await` | Pausa la ejecución hasta que la Promesa se resuelva |
+| `try/catch` | Captura errores de operaciones async (reemplaza al `.catch()`) |
+| `fetch()` | Hace peticiones HTTP a APIs. Devuelve una Promesa |
+| `Promise.all()` | Ejecuta múltiples promesas **en paralelo**, espera que terminen todas |
+| `Promise.allSettled()` | Como `Promise.all` pero no falla si alguna rechaza |
+
+📄 Ejemplo: `ejemplos/12-async-await.js`
