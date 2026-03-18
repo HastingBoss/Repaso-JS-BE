@@ -88,3 +88,26 @@ Colección de pares **clave-valor** que representan entidades. Las propiedades s
 | `every(fn)` | `true` si **todos** cumplen la condición |
 
 📄 Ejemplo: `ejemplos/10-metodos-arrays-avanzados.js`
+
+---
+
+## ⚛️ React
+
+### 🔄 `useState` — Hook de estado
+> ⚠️ **No es JavaScript puro.** Es un hook de React y solo funciona dentro de componentes. No se puede ejecutar con `node`.
+
+`useState` permite que un componente "recuerde" un valor entre renders. Al cambiar el estado con la función `set`, React vuelve a renderizar el componente actualizando la pantalla. Nunca se modifica el estado directamente — siempre mediante la función setter.
+
+```jsx
+const [valor, setValor] = useState(valorInicial);
+```
+
+| Concepto | Ejemplo |
+|---|---|
+| Estado simple | `const [cuenta, setCuenta] = useState(0)` |
+| Estado de texto (input) | `const [nombre, setNombre] = useState("")` |
+| Estado booleano (toggle) | `const [visible, setVisible] = useState(true)` |
+| Estado con objeto | Usar spread: `setUsuario({ ...usuario, nombre: "x" })` |
+| Estado con array | Usar spread: `setTareas([...tareas, nuevaTarea])` |
+
+📄 Ejemplo: `ejemplos/11-useState.jsx`
